@@ -28,5 +28,27 @@ describe('login spec', () => {
     cy.noticeHave('O formato do e-mail está incorreto. Por favor, verifique e tente novamente!')
 
   })
+
+  it('do not should login when email is not informed', () => {
+
+    cy.login('', 'showtime')
+    cy.noticeHave('Parece que você esqueceu de informar seu e-mail.')
+
+  })
+
+  it('do not should login when email is not informed', () => {
+
+    cy.login('papito@cyskills.com.br', '')
+    cy.noticeHave('Por favor, digite sua senha para continuar.')
+
+  })
+
+  it('do not should login when email and password are not informed', () => {
+
+    cy.login('', '')
+    cy.noticeHave('Parece que você esqueceu de informar seu e-mail.')
+
+  })
+
 })
 
