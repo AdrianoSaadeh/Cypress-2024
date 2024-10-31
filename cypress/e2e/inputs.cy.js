@@ -1,11 +1,10 @@
 describe('Input Fields', () => {
     beforeEach(() => {
         cy.goHome()
+        cy.doLogin()
     })
 
     it('should fill in the text field', () => {
-        cy.login('papito@cyskills.com.br', 'showtime')
-        cy.userLoggedIn()
 
         cy.goTo('/input-fields', 'Input Fields')
 
