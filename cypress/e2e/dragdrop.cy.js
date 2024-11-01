@@ -11,6 +11,7 @@ describe('Drag and Drop', () => {
 
         const dataTransfer = new DataTransfer()
 
+        //usando localizador especifico
         cy.get('[data-cy="1002"]')
             .trigger('dragstart', {
                 dataTransfer
@@ -28,6 +29,7 @@ describe('Drag and Drop', () => {
 
         const dataTransfer = new DataTransfer()
 
+        //estrategia sem id definido
         cy.contains('div[draggable=true]', task)
             .trigger('dragstart', {
                 dataTransfer
