@@ -43,4 +43,12 @@ describe('Tables', () => {
         cy.get('table tbody')
             .should('contain', name)
     })
+
+    it('should to check an Instagram link', () => {
+        const id = 'instapapito'
+        cy.contains('table tbody tr', id)
+            .contains('a', 'Visitar')
+            .should('have.attr', 'href', 'https://instagram.com/instapapito')
+            .and('have.attr', 'target', '_blank')
+    })
 })

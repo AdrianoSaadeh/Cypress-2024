@@ -24,7 +24,7 @@ describe('Drag and Drop', () => {
             })
     })
 
-    it.only('should be able to move a task on the board', () => {
+    it('should be able to move a task on the board', () => {
         const task = 'Definir requisitos do projeto'
 
         const dataTransfer = new DataTransfer()

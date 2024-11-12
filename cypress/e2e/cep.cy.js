@@ -21,7 +21,7 @@ describe('CEP', () => {
             .should('have.value', 'RS')
     })
 
-    it.only('should be able to add a new address via Correios API using Intercpet', () => {
+    it('should be able to add a new address via Correios API using Intercpet', () => {
 
         const address = {
             cep: '92999999',
